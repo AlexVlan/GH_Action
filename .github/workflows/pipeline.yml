@@ -1,5 +1,8 @@
 name: Test-Deploy
-
+env:
+  APPLICATION_NAME: "My app"
+  COMMIT: "any_${{ github.sha }}"
+#   ENVIRONMENT: 
 # on: [push]
 on: 
   push:
