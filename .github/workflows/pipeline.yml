@@ -1,0 +1,16 @@
+name: Init
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v1
+        - name: Run
+          run: echo Hello
+        - name: Run a m
+          run:
+            echo Add,
+            echo test
