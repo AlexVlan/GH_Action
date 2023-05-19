@@ -34,8 +34,14 @@ jobs:
         needs: [init]
 
         steps:
-        - name: check programms
+        - name: check programms_before
           run: |
              aws --version
              terraform --version
-             terraformer --version
+        - name : update system
+          run: apt update -y
+        - name: check programms_after
+          run: |
+             aws --version
+             terraform --version
+
