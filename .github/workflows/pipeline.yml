@@ -28,6 +28,9 @@ jobs:
 
         - name: Check ls
           run: ls -alh
+
+        - name: run py
+          run: python3 ./init.py
     validate:
         runs-on: ubuntu-latest
         needs: [init]
