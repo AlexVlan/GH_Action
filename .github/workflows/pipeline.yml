@@ -14,14 +14,20 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        - name: Git clone
+          run: actions/checkout@v1
+          
         - name: Initialication
           run: echo "Hello World!"
+
         - name: Validation
           run: |
             echo "Add"
             echo "test"
             echo "Commit ${{env.COMMIT}}"
 
+        - name: Check ls
+          run: ls -alh
     validate:
         runs-on: ubuntu-latest
         needs: [init]
