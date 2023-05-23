@@ -38,10 +38,4 @@ jobs:
           run: |
              aws --version
              terraform --version
-        - name : update system
-          run: apt update -y
-        - name: check programms_after
-          run: |
-             aws --version
-             terraform --version
 
